@@ -1,12 +1,31 @@
-WebScreenShot
-
+<p align="center">
+  <img src="/webscreenshot_logo.png" alt="Logo"/>
+</p>
 ====================
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)][MIT License] 
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)][MIT License] [![Build Status](https://travis-ci.org/clems4ever/webscreenshot.svg?branch=master)](https://travis-ci.org/clems4ever/webscreenshot)
 
-WebScreenShot allows you to send REST requests to take screenshots of a webpage.
+*WebScreenShot* allows you to take screenshots of webpages through a REST API.
 
-# Contributing to WebScreenShots
+# Howto
+
+To take a screenshot of a website, launch the service and POST the following payload at /screenshot
+
+    curl -XPOST -H "Content-Type: application/json" -d '
+    {
+        "config": {
+            "width": 1600, 
+            "height": 1000, 
+            "top": 0, 
+            "left": 0, 
+            "delay": 1000
+        }, 
+        "url": "https://github.com/clems4ever/webscreenshot"
+    }' localhost:8080/screenshot > example.png 
+
+After about 1 second, you receive the image. 
+
+# Contributing to WebScreenShot
 
 Follow [contributing](CONTRIBUTING.md) file.
 

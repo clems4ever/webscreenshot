@@ -1,0 +1,14 @@
+language: node_js
+
+services:
+  - docker
+
+script:
+  - docker build -t webscreenshot .
+
+notifications:
+  email:
+    recipients:
+      - clement.michaud34@gmail.com
+    on_success: change
+    on_failure: always
