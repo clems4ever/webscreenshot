@@ -1,6 +1,7 @@
 language: node_js
 services:
 - docker
+before_install: npm install -g npm@'>=2.13.5'
 script:
 - npm test
 - docker build -t webscreenshot .
@@ -8,7 +9,7 @@ deploy:
   provider: npm
   email: clement.michaud34@gmail.com
   api_key:
-    secure: mB/Cgp1ZwZ8DDpgtJk7r4EvA4ndI2Cc3B7tX6FF/kPo94D6dP4iIFuW9l/ZrYUJlcP7zFEbUDsf7b64W8TgtJIqECAeaHW4jwKUP8i5xSLaiOxLnMKTYsPzX8Mu/3cyUWDYcWAWTfjvYGhIaiuoWG+r6FVHdyeYSufMOOsyQhsCJJhbgj0U9uOwXpU4ZiKGCPHL3tuvg81T7jkj+gZFc3u5o7Jbgq77k5CLxa4dUE8Omboss/MibR8Y537OsVZTnOUWaAGdV0pC1O+AsekCbwa9bDXhFVGJ5paQabbOiFcLeQsflDTs6sHPedcFRBBNWg/MHak78gNwwBlWNiRlcnvrtUehRHk6EgEnM6jxVBgIQA50p9Mih/zwBBBRL4P4+jL8e41h0Mq76nBnb0HoAmEvB2kbGjBzyR5aj68s34DH52nIVWyhpa3ZSlbMyFw6HpR2vGhMHjyo3OGvqLDfjEI0OHjZAdLUOTBgzINWHqVCzV93df0dpdF0EM6pUJtwAoeN3Tbaw3+6cGZArUoRHVKMeBVOrYwGKvytgeUaD5kQwbAvH1WIA+Hc7wWmbhmQ8ElnD3JiD0dsOIPaH6004wJuI+M3yNFmocjwO6WZGstFPGWPJ7X+S04NQYZcVsqes3IvtDc0z+pXP8weDa/wC2etHh4kZ5yWZn/BKtrrV8AE=
+    secure: hf7z+5j/3M+NkE3qcTdpKKa6P9CsrzbvoNp0FcuLzwYQlMyAW0BP+5Tktz39gqcIn3MYAYUQYOSjoTE1D9Ji5ImPREYR7qdU/V02NdkhLh19+/Be1t7a+uPi/NZ0dlqN3tnRsCpfuneHU1gH9K6KQjrP8fDgy6ehaunKY/vh2F5uk8Ip1lMdUA2Um7mwANzapEnjwyCELmuNwKMx0zqD8V+cjF7B0MZO/T4UTOx5+KG6yWrdmTSz2+IoCwtz5Ca6LtS+xovv8eEVkNbYFwojFQiYq63FXX2EY18A6tNkiBYRVCg9VC4yjtP+OfYK5ueN4gvsVH8IK70cEm6k3IVaI9AhxHC75tF5fW3/6oT3VikUZv7sPpWYQz4jlDCoJoXwNPA4gJh+Y8g+x+5SvG6CSgPpfTWL9y9XGb5+NCZIoRbVHBQp9z/xJPOO4RIJvhWTaZ3houL07KUYyVVqk7GxgNrfgpam1rX1ze1ajhJ7Cmv6TKCg0Av9aaSQ9g0kLYUfmG0pU+vzkckwok26u6+2nMsp6mZZctnhYaBzsai0T5CGSbQrouT+YSOexHw3HS3O0rm10ZLir3tK5QC7GytOKuzV0Nal7e3U6xXlYwBxvUXMZCNyOJM5+II7ucdvM6Jzhbro1i1zt7hwP6+lXdH7sFpaszP3dbkwotGs8OlswrM=
   on:
     tags: true
 notifications:
