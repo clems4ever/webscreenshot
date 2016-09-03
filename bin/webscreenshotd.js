@@ -3,12 +3,14 @@
 var webscreenshot = require('../lib/webscreenshot');
 var program = require('commander');
 
+var DEFAULT_PORT = 8080;
+
 program
   .version('1.0.0')
-  .option('-p, --port [port]', 'The port used by the REST API')
+  .option('-p, --port [port]', 'The port used by the REST API (default is ' + DEFAULT_PORT +').')
   .parse(process.argv);
 
-var port = program.port || 8080
+var port = program.port || DEFAULT_PORT; 
 
 webscreenshot(port)
 .then(function() {
