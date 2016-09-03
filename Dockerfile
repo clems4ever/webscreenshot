@@ -8,5 +8,5 @@ ADD bin/ /src/bin
 ADD lib/ /src/lib
 
 RUN npm install
-CMD ["node", "app.js"]
+CMD ["node", "bin/webscreenshotd"]
 
