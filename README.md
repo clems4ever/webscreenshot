@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/webscreenshot_logo.png" alt="Logo"/>
+  <img src="/docs/img/webscreenshot_logo.png" alt="Logo"/>
 </p>
 ====================
 
@@ -8,6 +8,14 @@
 *WebScreenShot* allows you to take screenshots of webpages through a REST API.
 
 # Howto
+
+Install webscreenshot on your computer 
+
+    npm install -g webscreenshot
+
+And launch the service
+
+    webscreenshot
 
 To take a screenshot of a website, launch the service and POST the following payload at /screenshot
 

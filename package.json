@@ -1,8 +1,10 @@
 {
   "name": "webscreenshot",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "Take screenshots of websites.",
+  "bin": {
+    "webscreenshot": "bin/webscreenshot.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
