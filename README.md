@@ -7,7 +7,7 @@
 
 *WebScreenShot* allows you to take screenshots of webpages through a REST API.
 
-# Howto
+# Usage 
 
 Install webscreenshot on your computer 
 
@@ -15,7 +15,7 @@ Install webscreenshot on your computer
 
 And launch the service
 
-    webscreenshot
+    webscreenshotd
 
 To take a screenshot of a website, launch the service and POST the following payload at /screenshot
 
@@ -32,6 +32,21 @@ To take a screenshot of a website, launch the service and POST the following pay
     }' localhost:8080/screenshot > example.png 
 
 After about 1 second, you receive the image. 
+
+## Parameters
+
+Below is the list of available parameters
+
+| Parameter       | Description                                                       |
+|-----------------|-------------------------------------------------------------------|
+| url             | The url to take a screenshot of.                                  |
+| config.width    | The width of the viewport in pixels.                              |
+| config.height   | The height of the viewport in pixels.                             |
+| config.top      | The vertical shift regarding the top of the page in pixels.       |
+| config.left     | The horizontal shift regarding the left ot page in pixels.        |
+| config.delay    | The delay to wait before the screenshot is taken in milliseconds. |
+| config.username | The username to use for basic authentication.                     |
+| config.password | The password to use for basic authentication.                     |
 
 # Contributing to WebScreenShot
 
