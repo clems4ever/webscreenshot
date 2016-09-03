@@ -4,6 +4,8 @@ var requestify = require('requestify');
 var should = require('should');
 var webscreenshot = require('../lib/webscreenshot');
 
+var SCREENSHOT_ENDPOINT = '/';
+
 function serveExamplePage(req, res) {
     res.send('coucou'); 
 }
@@ -34,7 +36,7 @@ describe('Test webscreenshot REST API', function() {
     describe('When a screenshot is requested from the REST API', function() {
         it('should return the image as a result', function(done) {
             requestify
-            .post('http://localhost:9257/screenshot', {
+            .post('http://localhost:9257' + SCREENSHOT_ENDPOINT, {
                 config: {
                     width: 300,
                     height: 300,
@@ -54,7 +56,7 @@ describe('Test webscreenshot REST API', function() {
 
             var start = new Date();
             requestify
-            .post('http://localhost:9257/screenshot', {
+            .post('http://localhost:9257' + SCREENSHOT_ENDPOINT, {
                 config: {
                     width: 300,
                     height: 300,

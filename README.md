@@ -13,11 +13,11 @@ Install webscreenshot on your computer
 
     npm install -g webscreenshot
 
-And launch the service
+And start the service
 
-    webscreenshotd
+    webscreenshotd --port 8080
 
-To take a screenshot of a website, launch the service and POST the following payload at /screenshot
+To take a screenshot of a website, POST the following payload at the / endpoint
 
     curl -XPOST -H "Content-Type: application/json" -d '
     {
@@ -29,7 +29,7 @@ To take a screenshot of a website, launch the service and POST the following pay
             "delay": 1000
         }, 
         "url": "https://github.com/clems4ever/webscreenshot"
-    }' localhost:8080/screenshot > example.png 
+    }' localhost:8080/ > example.png 
 
 After about 1 second, you receive the image. 
 
