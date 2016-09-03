@@ -4,8 +4,8 @@ MAINTAINER Clement Michaud
 WORKDIR /src
 
 ADD package.json /src/package.json
-ADD app.js /src/app.js
-ADD take_screenshot.js /src/take_screenshot.js
+ADD bin/ /src/bin
+ADD lib/ /src/lib
 
 RUN npm install
 CMD ["node", "app.js"]

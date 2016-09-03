@@ -4,6 +4,7 @@ services:
   - docker
 
 script:
+  - npm test
   - docker build -t webscreenshot .
 
 notifications:
