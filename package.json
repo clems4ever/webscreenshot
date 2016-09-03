@@ -1,6 +1,6 @@
 {
   "name": "webscreenshot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Take screenshots of websites.",
   "bin": {
     "webscreenshot": "bin/webscreenshot.js"
@@ -8,9 +8,9 @@
   "scripts": {
     "test": "mocha"
   },
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/clems4ever/webscreenshot"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clems4ever/webscreenshot"
   },
   "author": "Clément Michaud",
   "license": "MIT",
